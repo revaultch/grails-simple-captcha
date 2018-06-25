@@ -1,14 +1,11 @@
 package grails.simple.captcha
 
 import grails.plugins.*
-class SimpleCaptchaGrailsPlugin extends Plugin {
 
-    // the plugin version
-    def version = "1.0.0"
+class GrailsSimpleCaptchaGrailsPlugin extends Plugin {
+
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "3.0.1 > *"
-    // the other plugins this plugin depends on
-    def dependsOn = [:]
+    def grailsVersion = "3.3.6 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = ["grails-app/conf", "grails-app/domain", "grails-app/i18n", "grails-app/utils",
                           "grails-app/views", "lib", "scripts", "web-app", "grails-app/views/error.gsp"]

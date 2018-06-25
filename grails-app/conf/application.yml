@@ -5,13 +5,21 @@ grails:
         defaultPackage: grails.simple.captcha
 info:
     app:
-        name: 'simple-captcha'
-        version: '1.0.0'
-        grailsVersion: '3.0.1'
+        name: '@info.app.name@'
+        version: '@info.app.version@'
+        grailsVersion: '@info.app.grailsVersion@'
 spring:
+    main:
+        banner-mode: "off"
     groovy:
         template:
             check-template-location: false
+
+# Spring Actuator Endpoints are Disabled by Default
+endpoints:
+    enabled: false
+    jmx:
+        enabled: true
 
 ---
 grails:
@@ -30,7 +38,7 @@ grails:
             css: text/css
             csv: text/csv
             form: application/x-www-form-urlencoded
-            html: 
+            html:
               - text/html
               - application/xhtml+xml
             js: text/javascript
@@ -38,9 +46,10 @@ grails:
               - application/json
               - text/json
             multipartForm: multipart/form-data
+            pdf: application/pdf
             rss: application/rss+xml
             text: text/plain
-            hal: 
+            hal:
               - application/hal+json
               - application/hal+xml
             xml:
@@ -53,9 +62,6 @@ grails:
         defaultScope: singleton
     converters:
         encoding: UTF-8
-    hibernate:
-        cache:
-            queries: false
     views:
         default:
             codec: html
@@ -67,3 +73,6 @@ grails:
                 scriptlets: html
                 taglib: none
                 staticparts: none
+endpoints:
+    jmx:
+        unique-names: true

@@ -7,8 +7,8 @@ import java.security.MessageDigest
 
 class SimpleCaptchaService implements ServletAttributes {
 
-    static final CAPTCHA_SOLUTION_ATTR = 'captcha'
-    static final CAPTCHA_IMAGE_ATTR = 'captchaImage'
+    static final String CAPTCHA_SOLUTION_ATTR = 'captcha'
+    static final String CAPTCHA_IMAGE_ATTR = 'captchaImage'
 
     static transactional = false
 
